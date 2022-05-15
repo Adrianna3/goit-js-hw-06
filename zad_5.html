@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="name-input" placeholder="Please enter your name" />
+    <h1>Hello, <span id="name-output">Anonymous</span>!</h1>
+    <script>
+      const textInput = document.querySelector("#name-input");
+      const textOutput = document.querySelector("#name-output");
+      textInput.addEventListener("input", (event) => {
+        textOutput.textContent = event.currentTarget.value;
+        if (textOutput.textContent === "") {
+          textOutput.textContent = "Anonymous";
+        }
+      });
+    </script>
+  </body>
+</html>
